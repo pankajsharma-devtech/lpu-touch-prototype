@@ -1,0 +1,58 @@
+.app-header {
+  background: var(--header-bg);
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 14px 12px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.app-header__side {
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.app-header__side--right {
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.app-header__back {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-header__title {
+  flex: 2;
+  text-align: center;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.app-header__qr-btn {
+  background: var(--grad-pill);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.app-header__link {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 4px 6px;
+}

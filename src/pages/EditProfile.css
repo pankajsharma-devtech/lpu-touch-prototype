@@ -1,0 +1,161 @@
+.ep-photo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 26px 16px 10px;
+}
+
+.ep-photo-wrap {
+  position: relative;
+  width: 116px;
+  height: 116px;
+}
+
+.ep-photo {
+  width: 116px;
+  height: 116px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: #dcdcdc;
+  box-shadow: var(--shadow-card);
+}
+
+.ep-photo-btn {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--grad-pill);
+  border: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ep-photo-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.ep-group {
+  margin: 14px 16px 0;
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 6px 16px 10px;
+  box-shadow: var(--shadow-soft);
+}
+
+.ep-group__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 0 6px;
+}
+
+.ep-field {
+  display: block;
+  padding: 8px 0;
+}
+
+.ep-field span {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #4a4a4a;
+  margin-bottom: 5px;
+}
+
+.ep-field input,
+.ep-field textarea {
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 13.5px;
+  color: var(--text-primary);
+  background: #fafafa;
+  resize: none;
+}
+
+.ep-field input:focus,
+.ep-field textarea:focus {
+  outline: 2px solid var(--grad-start);
+  background: #fff;
+}
+
+.ep-color-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ep-color-input {
+  width: 44px;
+  height: 36px;
+  padding: 2px;
+  border: 1px solid #e4e4e4;
+  border-radius: var(--radius-sm);
+  background: #fafafa;
+  cursor: pointer;
+}
+
+.ep-color-value {
+  font-size: 13px;
+  font-family: monospace;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.ep-color-hint {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin: 6px 0 4px;
+  line-height: 1.4;
+}
+
+.ep-actions {
+  padding: 22px 16px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ep-save {
+  background: var(--grad-card);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2b2320;
+}
+
+.ep-reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  border: 1.5px solid #d9534f;
+  color: #d9534f;
+  border-radius: var(--radius-md);
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ep-toast {
+  margin: 0 16px 24px;
+  background: #eafaf0;
+  color: #2f8a54;
+  border: 1px solid #bfe9cf;
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 13px;
+  text-align: center;
+}

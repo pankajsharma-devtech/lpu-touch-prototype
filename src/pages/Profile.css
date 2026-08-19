@@ -1,0 +1,67 @@
+.profile-card {
+  background: var(--grad-card);
+  margin: 12px 14px;
+  border-radius: var(--radius-lg);
+  padding: 26px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-card);
+}
+
+.profile-card__photo {
+  width: 132px;
+  height: 132px;
+  border-radius: 14px;
+  object-fit: cover;
+  background: #dcdcdc;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card__name {
+  margin-top: 14px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #2b2320;
+}
+
+.profile-card__program {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #3d2f22;
+  text-align: center;
+  padding: 0 8px;
+}
+
+.psection-header {
+  background: var(--header-bg-2);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 13px;
+  margin-top: 10px;
+}
+
+.psection-body {
+  background: #fff;
+  padding: 4px 18px 6px;
+}
+
+.prow {
+  padding: 12px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.prow__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3a3a3a;
+  margin-bottom: 3px;
+}
+
+.prow__value {
+  font-size: 14px;
+  color: #6b6b6b;
+  line-height: 1.4;
+}

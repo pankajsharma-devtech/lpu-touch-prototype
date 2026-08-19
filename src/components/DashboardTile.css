@@ -1,0 +1,40 @@
+.dtile {
+  position: relative;
+  background: var(--bg-cream);
+  border: 1px solid var(--border-cream);
+  border-radius: var(--radius-md);
+  padding: 22px 10px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #3a3a3a;
+}
+
+.dtile--highlighted {
+  border: 1.5px solid var(--grad-start);
+}
+
+.dtile__badge {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: var(--grad-pill);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 8px;
+}
+
+.dtile__label {
+  background: linear-gradient(90deg, #ffb27a 0%, #ffd08a 100%);
+  color: #3a2b1f;
+  font-size: 12.5px;
+  font-weight: 500;
+  text-align: center;
+  padding: 8px 8px;
+  border-radius: var(--radius-sm);
+  width: 100%;
+  line-height: 1.25;
+}

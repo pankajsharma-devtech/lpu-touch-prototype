@@ -1,0 +1,121 @@
+.scanner-screen {
+  position: relative;
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.scanner-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  position: relative;
+  z-index: 5;
+}
+
+.scanner-close {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner-topbar__title {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.scanner-viewport {
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+
+/* Deliberately no CSS on the injected <video>/<canvas> elements here.
+   html5-qrcode sizes and positions them itself, and calculates its qrbox
+   scanning region against that layout — overriding it (e.g. forcing
+   object-fit: cover) makes the visible video not match the actual region
+   being decoded, so a QR clearly on-screen never gets detected. */
+
+.scanner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 0 32px;
+}
+
+.scanner-overlay p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 4px 0 0;
+}
+
+.scanner-overlay span {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.scanner-overlay--error {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.scanner-retry {
+  margin-top: 14px;
+  background: var(--grad-pill);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 10px 26px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.scanner-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  pointer-events: none;
+}
+
+.scanner-frame {
+  width: 240px;
+  height: 240px;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.35);
+}
+
+.scanner-hint p {
+  color: #fff;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+}
+
+.scanner-test-btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a;
+  border: 1px dashed #666;
+  border-radius: var(--radius-pill);
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 600;
+}

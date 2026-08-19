@@ -1,0 +1,83 @@
+:root {
+  /* Core gradient (cards, badges, active pills) — sampled from reference screenshots */
+  --grad-start: #fe8574;
+  --grad-end: #ffd47b;
+  --grad-card: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-end) 100%);
+  --grad-pill: linear-gradient(90deg, #ff7b62 0%, #ffb84d 100%);
+
+  /* Header / dark surfaces */
+  --header-bg: #323232;
+  --header-bg-2: #2b2b2b;
+  --text-on-dark: #ffffff;
+
+  /* App background */
+  --bg-app: #fbfbfb;
+  --bg-cream: #fffbef;
+  --border-cream: #f2e6d2;
+
+  /* Text */
+  --text-primary: #2b2b2b;
+  --text-secondary: #6b6b6b;
+  --text-muted: #8a8a8a;
+
+  /* Status */
+  --status-green: #3fb26b;
+  --status-amber: #d99a2b;
+  --accent-orange: #f4812c;
+
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 4px 14px rgba(43, 43, 43, 0.08);
+  --shadow-soft: 0 2px 8px rgba(43, 43, 43, 0.06);
+
+  --font-family: 'Roboto', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --mobile-w: 430px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  background: #e9e9e9;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #e9e9e9;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.15);
+  border-radius: 4px;
+}

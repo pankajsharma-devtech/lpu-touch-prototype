@@ -1,0 +1,112 @@
+.dash-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dash-header__hamburger {
+  background: none;
+  border: none;
+  padding: 6px;
+}
+
+.dash-header__title {
+  flex: 1;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  color: #2b2b2b;
+}
+
+.dash-header__bell {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 6px;
+}
+
+.dash-header__badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: var(--grad-pill);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 17px;
+  height: 17px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+
+.dash-section {
+  padding: 18px 16px 6px;
+}
+
+.dash-section__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dash-section__title {
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0;
+  color: #2b2b2b;
+}
+
+.dash-section__hint {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin: 6px 0 14px;
+}
+
+.dash-dost-btn {
+  background: var(--grad-card);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 9px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2b2320;
+}
+
+.dash-add-btn {
+  background: #2b2b2b;
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-timetable-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 14px 0 6px;
+  scroll-snap-type: x proximity;
+}
+
+.dash-timetable-scroll > * {
+  scroll-snap-align: start;
+}
+
+.dash-tile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 12px;
+  padding-bottom: 12px;
+}

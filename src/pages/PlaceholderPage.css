@@ -1,0 +1,20 @@
+.placeholder-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+.placeholder-body strong {
+  color: var(--text-primary);
+}
+
+.placeholder-body span {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}

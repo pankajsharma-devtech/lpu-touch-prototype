@@ -1,0 +1,80 @@
+.mc-card {
+  background: var(--grad-card);
+  margin: 14px;
+  border-radius: var(--radius-lg);
+  padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-card);
+}
+
+.mc-card__photo {
+  width: 108px;
+  height: 108px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #dcdcdc;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mc-card__name {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2b2320;
+}
+
+.mc-card__field {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.mc-card__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2b2320;
+}
+
+.mc-card__value {
+  font-size: 14px;
+  color: #3d2f22;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.mc-meal-section {
+  text-align: center;
+  padding: 22px 22px 30px;
+}
+
+.mc-instruction {
+  font-size: 21px;
+  color: #2b2b2b;
+  line-height: 1.3;
+  margin: 0 0 14px;
+}
+
+.mc-rate-us {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1.5px solid #8f2f2f;
+  color: #8f2f2f;
+  border-radius: var(--radius-pill);
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 26px;
+}
+
+.mc-meal-grid {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.mc-meal-grid--single {
+  max-width: calc(50% - 7px);
+}
