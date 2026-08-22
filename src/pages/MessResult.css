@@ -66,14 +66,14 @@
 /* countdown badge — small gray rounded pill, floating top-right */
 .mp-timer-badge {
   position: absolute;
-  top: -14px;
+  top: -16px;
   right: 16px;
-  width: 38px;
-  height: 38px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: #c4c4c4;
   color: #3a3a3a;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -89,21 +89,27 @@
 }
 
 .mp-photo {
-  width: 136px;
-  height: 136px;
+  width: 122px;
+  height: 122px;
   object-fit: cover;
-  border: 1px solid #cfcfcf;
-  background: #dcdcdc;
+  padding: 7px;
+  border: 1px solid #e2e2e2;
+  box-sizing: content-box;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .mp-qr {
-  width: 136px;
-  height: 136px;
+  width: 122px;
+  height: 122px;
   background: #fff;
-  border: 1px solid #cfcfcf;
+  border: 1px solid #e2e2e2;
+  padding: 7px;
+  box-sizing: content-box;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .mp-photo-qr-caption-row {
@@ -122,14 +128,14 @@
 }
 
 .mp-caption strong {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
   color: #2b2b2b;
 }
 
 .mp-caption span {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
   color: #2b2b2b;
 }
 
@@ -159,8 +165,8 @@
 
 .mp-meal-approved {
   text-align: center;
-  color: #62a91a;
-  font-size: 22px;
+  color: #6cbf3f;
+  font-size: 28px;
   font-weight: 700;
   margin: 32px 0 0;
 }
@@ -172,11 +178,11 @@
   gap: 6px;
   margin: 10px auto 0;
   background: none;
-  border: 1.5px solid #8f2f2f;
+  border: 1.8px solid #8f2f2f;
   color: #1a1a1a;
   border-radius: var(--radius-pill);
   padding: 7px 18px;
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 700;
 }
 
@@ -189,6 +195,7 @@
 
 .mp-accepted-frame__inner {
   background: #fdfdfd;
+  border: 2px solid #1a1a1a;
   min-height: 210px;
   display: flex;
   align-items: center;
@@ -198,8 +205,8 @@
 .mp-accepted-anim {
   display: flex;
   align-items: center;
-  gap: 6px;
-  height: 46px;
+  gap: 8px;
+  height: 56px;
 }
 
 .mp-accepted-anim__badge {
@@ -240,7 +247,7 @@
 
 .mp-accepted-anim__text {
   position: relative;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 800;
   font-style: italic;
   letter-spacing: 0.5px;
@@ -334,14 +341,15 @@
 }
 
 .mp-lower-row span {
-  font-size: 12.5px;
-  color: var(--text-muted);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #2b2b2b;
 }
 
 .mp-lower-row strong {
-  font-size: 14.5px;
-  font-weight: 500;
-  color: #2b2b2b;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b6b6b;
 }
 
 .mp-verification {
@@ -349,8 +357,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #ddd;
-  border-radius: var(--radius-sm);
+  border: 1.5px solid #1a1a1a;
+  border-radius: 12px;
   padding: 12px 16px;
   background: #fff;
 }

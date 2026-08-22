@@ -127,7 +127,7 @@ export default function MessResult() {
           <div className="mp-accepted-frame" style={{ background: profile.acceptedBorderColor }}>
             <div className="mp-accepted-frame__inner">
               <div className="mp-accepted-anim" aria-label="Accepted">
-                <svg className="mp-accepted-anim__badge" viewBox="0 0 64 64" width="46" height="46">
+                <svg className="mp-accepted-anim__badge" viewBox="0 0 64 64" width="56" height="56">
                   <circle className="mp-accepted-anim__ring" cx="32" cy="32" r="26" />
                   <line className="mp-accepted-anim__pending-line" x1="6" y1="32" x2="58" y2="32" />
                   <circle className="mp-accepted-anim__fill" cx="32" cy="32" r="26" />
@@ -156,7 +156,10 @@ export default function MessResult() {
             </div>
             <div className="mp-lower-row">
               <span>Session</span>
-              <strong>{profile.admissionSession}</strong>
+              {/* Matches the real LPU Touch app's Mess Pass exactly: the row
+                  labeled "Session" displays the program string, not the
+                  admission session value shown elsewhere in the app. */}
+              <strong>{profile.program}</strong>
             </div>
             <div className="mp-lower-row">
               <span>Hostel</span>
