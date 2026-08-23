@@ -176,3 +176,60 @@
   font-size: 14px;
   letter-spacing: 0.4px;
 }
+/* Bottom section of sidebar */
+.sidebar__bottom-actions {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+/* Edit Profile / Prototype button */
+.sidebar__edit-profile {
+  width: calc(100% - 24px);
+  margin: 0 12px 8px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar__edit-profile:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar__edit-profile-tag {
+  margin-left: auto;
+  font-size: 9px;
+  opacity: 0.55;
+}
+
+/* Install App button */
+.sidebar__install {
+  width: calc(100% - 24px);
+  margin: 0 12px 8px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff8a70, #ffc66d);
+  color: #222;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar__install:hover {
+  opacity: 0.9;
+}
+
+/* Keep logout at bottom */
+.sidebar__bottom-actions .sidebar__logout {
+  margin-top: 0;
+}
