@@ -1,184 +1,493 @@
 /* =========================================================
-   MESS COUPON — LPU TOUCH STYLE
-   Designed around the 412 × 915 mobile reference
+   MESS PASS — LPU TOUCH STYLE
    ========================================================= */
 
-.mc-card {
-  margin: 14px 14px 0;
-  padding: 28px 28px 26px;
-  border-radius: 10px;
-  background: linear-gradient(110deg, #ff8177 0%, #ffb27b 52%, #ffd36f 100%);
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.16);
-  text-align: left;
+.mp-screen {
+  position: relative;
+  min-height: 100vh;
+  background: #1c1c1c;
 }
 
-/* Student photograph */
+.mp-backdrop {
+  height: 34px;
+}
 
-.mc-card__photo {
-  display: block;
-  width: 212px;
-  height: 212px;
-  margin: 0 auto 14px;
-  object-fit: cover;
-  border-radius: 14px;
-  background: #dbe5ef;
+.mp-sheet {
+  min-height: calc(100vh - 34px);
+  background: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mp-sheet__handle {
+  width: 36px;
+  height: 4px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.35);
+  margin: 8px auto 0;
+}
+
+.mp-header {
+  background: var(--header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px 16px;
+}
+
+.mp-header__title {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.mp-header__close {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ================= BODY ================= */
+
+.mp-body {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  background: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+  margin-top: -14px;
+  padding: 20px 20px 32px;
+}
+
+/* Countdown */
+
+.mp-timer-badge {
+  position: absolute;
+  top: -14px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  color: #3a3a3a;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Student name + registration number */
+/* ================= PHOTO + QR ================= */
 
-.mc-card__name {
-  margin: 0 0 42px;
-  text-align: center;
-  color: #252525;
-  font-size: 21px;
-  line-height: 1.25;
-  font-weight: 500;
+.mp-photo-qr-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 14px;
 }
 
-/* Information fields */
-
-.mc-card__field {
-  margin-bottom: 24px;
+.mp-photo {
+  width: 136px;
+  height: 136px;
+  object-fit: cover;
+  border: 1px solid #cfcfcf;
+  background: #dcdcdc;
 }
 
-.mc-card__field:last-child {
-  margin-bottom: 0;
-}
-
-.mc-card__label {
-  margin-bottom: 3px;
-  color: #242424;
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 700;
-}
-
-.mc-card__value {
-  color: #292929;
-  font-size: 17px;
-  line-height: 1.42;
-  font-weight: 400;
-}
-
-/* =========================================================
-   MEAL SECTION
-   ========================================================= */
-
-.mc-meal-section {
-  padding: 34px 20px 48px;
-  text-align: center;
+.mp-qr {
+  width: 136px;
+  height: 136px;
   background: #fff;
-}
-
-/* Instruction */
-
-.mc-instruction {
-  max-width: 340px;
-  margin: 0 auto 24px;
-  color: #111;
-  font-size: 24px;
-  line-height: 1.35;
-  font-weight: 400;
-}
-
-/* Rate us */
-
-.mc-rate-us {
-  display: inline-flex;
+  border: 1px solid #cfcfcf;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+}
 
-  min-width: 174px;
-  height: 45px;
-  margin-bottom: 28px;
+.mp-photo-qr-caption-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
 
-  border: 2px solid #8f3030;
-  border-radius: 24px;
-  background: #fff;
+.mp-caption {
+  width: 136px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
 
-  color: #111;
-  font-family: inherit;
-  font-size: 18px;
+.mp-caption strong {
+  font-size: 14px;
   font-weight: 500;
+  color: #2b2b2b;
+}
 
+.mp-caption span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+/* ================= BASIC INFORMATION ================= */
+
+.mp-program {
+  text-align: center;
+  font-size: 15px;
+  color: #2b2b2b;
+  margin: 28px 8px 0;
+  line-height: 1.4;
+}
+
+.mp-assigned-mess {
+  text-align: center;
+  font-size: 15px;
+  color: #2b2b2b;
+  margin: 22px 8px 0;
+}
+
+.mp-date-time-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 32px;
+  font-size: 16px;
+  color: #2b2b2b;
+}
+
+.mp-meal-approved {
+  text-align: center;
+  color: #62a91a;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 32px 0 0;
+}
+
+/* ================= RATE US ================= */
+
+.mp-rate-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 10px auto 0;
+  background: none;
+  border: 1.5px solid #8f2f2f;
+  color: #1a1a1a;
+  border-radius: var(--radius-pill);
+  padding: 7px 18px;
+  font-size: 13px;
+  font-weight: 700;
   cursor: pointer;
-  transition:
-    transform 0.15s ease,
-    background 0.15s ease;
 }
 
-.mc-rate-us:active {
-  transform: scale(0.97);
-  background: #fafafa;
+/* ================= ACCEPTED AREA ================= */
+
+.mp-accepted-frame {
+  margin: 18px -20px -32px;
+  padding: 18px;
 }
 
-/* =========================================================
-   MEAL BUTTON GRID
-   ========================================================= */
-
-.mc-meal-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  width: 100%;
-  max-width: 340px;
-  margin: 0 auto;
+.mp-accepted-frame__inner {
+  background: #fdfdfd;
+  min-height: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.mc-meal-grid--single {
-  grid-template-columns: 1fr;
-  max-width: 166px;
-  margin-top: 18px;
+.mp-accepted-anim {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 46px;
 }
 
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
+.mp-accepted-anim__badge {
+  flex-shrink: 0;
+  overflow: visible;
+}
 
-@media (max-width: 380px) {
-  .mc-card {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 22px 20px 22px;
+.mp-accepted-anim__ring {
+  fill: none;
+  stroke: #1a1a1a;
+  stroke-width: 4;
+  animation: mp-ring-fade 3s ease infinite;
+}
+
+.mp-accepted-anim__pending-line {
+  stroke: #9a9a9a;
+  stroke-width: 3;
+  animation: mp-pending-line 3s ease infinite;
+}
+
+.mp-accepted-anim__fill {
+  fill: #1e9e4b;
+  transform-origin: 32px 32px;
+  transform: scale(0);
+  animation: mp-fill-in 3s ease infinite;
+}
+
+.mp-accepted-anim__check {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 34;
+  stroke-dashoffset: 34;
+  animation: mp-check-draw 3s ease infinite;
+}
+
+.mp-accepted-anim__text {
+  position: relative;
+  font-size: 30px;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: #1e9e4b;
+  -webkit-text-stroke: 0.5px #17803d;
+  transform: scale(0);
+  transform-origin: left center;
+  display: inline-block;
+  animation: mp-text-pop 3s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+.mp-accepted-anim__underline {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: -4px;
+  height: 2px;
+  background: #9a9a9a;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: mp-underline-wipe 3s ease infinite;
+}
+
+/* ================= ACCEPTED ANIMATIONS ================= */
+
+@keyframes mp-pending-line {
+  0% {
+    opacity: 1;
   }
 
-  .mc-card__photo {
-    width: 175px;
-    height: 175px;
+  13% {
+    opacity: 0;
   }
 
-  .mc-card__name {
-    font-size: 19px;
-    margin-bottom: 34px;
-  }
-
-  .mc-card__label {
-    font-size: 17px;
-  }
-
-  .mc-card__value {
-    font-size: 16px;
-  }
-
-  .mc-instruction {
-    font-size: 21px;
+  100% {
+    opacity: 0;
   }
 }
 
-/* Prevent the layout from becoming unnecessarily huge
-   on desktop while keeping the mobile appearance. */
-
-@media (min-width: 700px) {
-  .mc-card {
-    max-width: 412px;
-    margin-left: auto;
-    margin-right: auto;
+@keyframes mp-ring-fade {
+  0%,
+  10% {
+    opacity: 1;
   }
 
-  .mc-meal-section {
-    max-width: 412px;
-    margin: 0 auto;
+  16% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes mp-fill-in {
+  0%,
+  8% {
+    transform: scale(0);
+  }
+
+  18% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes mp-check-draw {
+  0%,
+  15% {
+    stroke-dashoffset: 34;
+  }
+
+  28% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes mp-text-pop {
+  0%,
+  22% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  32% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+
+  40%,
+  92% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes mp-underline-wipe {
+  0%,
+  32% {
+    transform: scaleX(0);
+  }
+
+  44%,
+  92% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .mp-accepted-anim__ring,
+  .mp-accepted-anim__pending-line,
+  .mp-accepted-anim__fill,
+  .mp-accepted-anim__check,
+  .mp-accepted-anim__text,
+  .mp-accepted-anim__underline {
+    animation: none;
+  }
+
+  .mp-accepted-anim__pending-line,
+  .mp-accepted-anim__ring {
+    opacity: 0;
+  }
+
+  .mp-accepted-anim__fill {
+    transform: scale(1);
+  }
+
+  .mp-accepted-anim__check {
+    stroke-dashoffset: 0;
+  }
+
+  .mp-accepted-anim__text {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .mp-accepted-anim__underline {
+    transform: scaleX(1);
+  }
+}
+
+/* ================= LOWER INFORMATION ================= */
+
+.mp-lower-info {
+  margin-top: 34px;
+  padding: 0 4px;
+}
+
+.mp-lower-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.mp-lower-row span {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.mp-lower-row strong {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+/* ================= VERIFICATION ================= */
+
+.mp-verification {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  background: #fff;
+}
+
+.mp-verification span {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+}
+
+.mp-verification strong {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #2b2b2b;
+  letter-spacing: 0.5px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .mp-photo,
+  .mp-qr {
+    width: 120px;
+    height: 120px;
+  }
+
+  .mp-caption {
+    width: 120px;
+  }
+
+  .mp-photo-qr-row,
+  .mp-photo-qr-caption-row {
+    gap: 10px;
+  }
+
+  .mp-program,
+  .mp-assigned-mess {
+    font-size: 14px;
+  }
+
+  .mp-date-time-row {
+    gap: 24px;
+    font-size: 14px;
   }
 }
