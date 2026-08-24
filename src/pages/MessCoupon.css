@@ -1,17 +1,18 @@
 .mc-card {
   background: var(--grad-card);
-  margin: 14px;
-  border-radius: var(--radius-lg);
+  margin: 14px 16px 0;
+  border-radius: 8px;
   padding: 22px 20px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: var(--shadow-card);
+  box-sizing: border-box;
 }
 
 .mc-card__photo {
-  width: 108px;
-  height: 108px;
+  width: 120px;
+  height: 120px;
   border-radius: 10px;
   object-fit: cover;
   background: #dcdcdc;
@@ -19,62 +20,126 @@
 }
 
 .mc-card__name {
-  margin-top: 12px;
+  margin-top: 10px;
   font-size: 18px;
+  line-height: 1.25;
   font-weight: 500;
   color: #2b2320;
+  text-align: center;
 }
 
 .mc-card__field {
   width: 100%;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .mc-card__label {
-  font-size: 14px;
+  font-size: 15px;
+  line-height: 1.25;
   font-weight: 700;
   color: #2b2320;
 }
 
 .mc-card__value {
-  font-size: 14px;
+  font-size: 15px;
   color: #3d2f22;
-  margin-top: 2px;
+  margin-top: 3px;
   line-height: 1.4;
 }
 
+/* -----------------------------
+   MEAL SECTION
+----------------------------- */
+
 .mc-meal-section {
   text-align: center;
-  padding: 22px 22px 30px;
+  padding: 24px 20px 34px;
+  background: #fff;
+  box-sizing: border-box;
 }
 
 .mc-instruction {
-  font-size: 21px;
-  color: #2b2b2b;
-  line-height: 1.3;
-  margin: 0 0 14px;
+  font-size: 23px;
+  font-weight: 400;
+  color: #171717;
+  line-height: 1.35;
+  margin: 0 auto 22px;
+  max-width: 340px;
 }
 
 .mc-rate-us {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  background: none;
+
+  background: #fff;
   border: 1.5px solid #8f2f2f;
   color: #8f2f2f;
-  border-radius: var(--radius-pill);
+
+  border-radius: 999px;
   padding: 7px 16px;
+
   font-size: 13px;
   font-weight: 700;
-  margin-bottom: 26px;
+
+  margin: 0 0 12px;
+  cursor: pointer;
 }
+
+/* -----------------------------
+   MEAL BUTTONS
+----------------------------- */
 
 .mc-meal-grid {
   display: flex;
   gap: 14px;
+  width: 100%;
   margin-top: 14px;
 }
 
 .mc-meal-grid--single {
-  max-width: calc(50% - 7px);
+  width: calc(50% - 7px);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* -----------------------------
+   MOBILE SIZING
+----------------------------- */
+
+@media (max-width: 380px) {
+
+  .mc-card {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 20px 16px 22px;
+  }
+
+  .mc-card__photo {
+    width: 108px;
+    height: 108px;
+  }
+
+  .mc-card__name {
+    font-size: 17px;
+  }
+
+  .mc-card__field {
+    margin-top: 17px;
+  }
+
+  .mc-card__label,
+  .mc-card__value {
+    font-size: 14px;
+  }
+
+  .mc-instruction {
+    font-size: 20px;
+  }
+
+  .mc-meal-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

@@ -1,6 +1,6 @@
-import { Search, UserCog, LogOut, X, Download } from 'lucide-react';
+import { Search, LogOut, X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useProfile } from '../context/ProfileContext';
 import { SIDEBAR_ITEMS } from '../data/mockData';
 import './Sidebar.css';
@@ -10,42 +10,10 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-// Chrome/Android PWA install event
-interface BeforeInstallPromptEvent extends Event {
-  prompt: () => Promise<void>;
-  userChoice: Promise<{
-    outcome: 'accepted' | 'dismissed';
-    platform: string;
-  }>;
-}
-
 export default function Sidebar({ open, onClose }: SidebarProps) {
   const { profile } = useProfile();
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
-
-  const [installPrompt, setInstallPrompt] =
-    useState<BeforeInstallPromptEvent | null>(null);
-
-  // Capture the browser's install prompt
-  useEffect(() => {
-    const handleBeforeInstallPrompt = (event: Event) => {
-      event.preventDefault();
-      setInstallPrompt(event as BeforeInstallPromptEvent);
-    };
-
-    window.addEventListener(
-      'beforeinstallprompt',
-      handleBeforeInstallPrompt
-    );
-
-    return () => {
-      window.removeEventListener(
-        'beforeinstallprompt',
-        handleBeforeInstallPrompt
-      );
-    };
-  }, []);
 
   const filteredItems = SIDEBAR_ITEMS.filter((item) =>
     item.label.toLowerCase().includes(query.toLowerCase())
@@ -56,23 +24,6 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
 
     if (route) {
       navigate(route);
-    }
-  }
-
-  async function installApp() {
-    if (!installPrompt) {
-      alert(
-        'Install is not available yet. Open this website in Chrome on your phone and try again.'
-      );
-      return;
-    }
-
-    await installPrompt.prompt();
-
-    const { outcome } = await installPrompt.userChoice;
-
-    if (outcome === 'accepted') {
-      setInstallPrompt(null);
     }
   }
 
@@ -147,44 +98,14 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           )}
         </nav>
 
-        {/* Bottom actions */}
-        <div className="sidebar__bottom-actions">
-
-          {/* Edit Prototype */}
-          <button
-            className="sidebar__edit-profile"
-            onClick={() => go('/edit-profile')}
-          >
-            <UserCog size={18} />
-
-            <span>Edit Profile</span>
-
-            <span className="sidebar__edit-profile-tag">
-              Prototype feature
-            </span>
-          </button>
-
-          {/* Install Web App */}
-          <button
-            className="sidebar__install"
-            onClick={installApp}
-          >
-            <Download size={18} />
-
-            <span>Install LPU Touch</span>
-          </button>
-
-          {/* Logout */}
-          <button
-            className="sidebar__logout"
-            onClick={() => go('/')}
-          >
-            <LogOut size={18} />
-
-            <span>LOGOUT</span>
-          </button>
-
-        </div>
+        {/* Logout only */}
+        <button
+          className="sidebar__logout"
+          onClick={() => go('/')}
+        >
+          <LogOut size={18} />
+          <span>LOGOUT</span>
+        </button>
       </aside>
     </>
   );

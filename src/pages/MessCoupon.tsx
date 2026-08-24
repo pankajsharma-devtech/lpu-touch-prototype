@@ -22,11 +22,14 @@ export default function MessCoupon() {
       <AppHeader
         title="Mess Coupon"
         onBack={() => navigate(-1)}
-        right={
-          <button className="app-header__link" onClick={() => alert('Meal history — demo only.')}>
-            Meal History
-          </button>
-        }
+       right={
+  <button
+    className="app-header__link"
+    onClick={() => navigate('/mess/history')}
+  >
+    Meal History
+  </button>
+}
       />
 
       <div className="scroll-body">

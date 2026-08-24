@@ -29,7 +29,11 @@ export default function Dashboard() {
           <Menu size={26} strokeWidth={2.2} color="#e8783f" />
         </button>
         <h1 className="dash-header__title">Dashboard</h1>
-        <button className="dash-header__bell" aria-label="Notifications">
+        <button
+  className="dash-header__bell"
+  onClick={() => navigate('/messages')}
+  aria-label="Notifications"
+>
           <Bell size={24} strokeWidth={2} color="#2b2b2b" />
           <span className="dash-header__badge">13</span>
         </button>
